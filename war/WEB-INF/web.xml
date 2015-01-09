@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app>
+    
+    <!-- declare servlets -->
+    <servlet>
+        <servlet-name>TranslatorServlet</servlet-name>
+        <servlet-class>edu.ycp.coady.translator.servlet.TranslatorServlet</servlet-class>
+    </servlet>
+
+    <!-- map of urls to servlet(s) -->
+    <servlet-mapping>
+        <servlet-name>TranslatorServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    
+    <welcome-file-list>
+        <welcome-file>page/independentStudy.html</welcome-file>
+    </welcome-file-list>
+    
+</web-app>
