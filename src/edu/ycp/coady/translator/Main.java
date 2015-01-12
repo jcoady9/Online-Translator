@@ -19,7 +19,7 @@ public class Main {
 		webContext.setContextPath("/");
 		webContext.setWar("./war");
 		webContext.setResourceBase("./war/page/");
-		webContext.setWelcomeFiles(new String[] {"independentStudy.html"});
+		webContext.setWelcomeFiles(new String[] {"translatorPage.html"});
 		
 		server.setHandler(webContext);
 		

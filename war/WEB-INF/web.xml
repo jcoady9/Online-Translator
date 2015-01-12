@@ -15,7 +15,7 @@
     </servlet-mapping>
     
     <welcome-file-list>
-        <welcome-file>page/independentStudy.html</welcome-file>
+        <welcome-file>page/translatorPage.html</welcome-file>
     </welcome-file-list>
     
 </web-app>
