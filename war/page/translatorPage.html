@@ -1,46 +1,69 @@
+<!DOCTYPE html>
+
 <html>
 
 	<head>
 		<h1>Online Translator</h1>
+
+		<script type="text/javascript">
+			function httpPost(){
+				//alert(orig_text.value);
+				var xmlHttp = new XMLHttpRequest();
+				xmlHttp.onreadystatechange = function(){
+					if(xmlHttp.readyState == 0){
+						alert("request not initialized.");
+					}else if(xmlHttp.readyState == 1){
+						alert("server connection established.");
+					}else if(xmlHttp.readyState == 2){
+						alert("request recieved.");
+					}else if(xmlHttp.readyState == 3){
+						alert("processing request.");
+					}else{
+						alert("request finished, response is ready");
+						target_text.value = xmlHttp.responseXML;
+					}
+				};
+				xmlHttp.open("POST", "http://localhost:8081", true);
+				xmlHttp.send(null);
+				//target_text.value = xmlHttp.statusText + xmlHttp.readyState;
+			}
+		</script>
+
 	</head>
 	
 	<body>
 
-		<p>
-			This is some test text.
-		</p>
-
 		<table>
+
 			<tr>
-				<td>
+				<td>Original Text: 
 					<form>
-						Original Text: 
-						<select>
+						<select id="source_lang">
 							<option value="english">english</option>
 							<option valud="german">deutsch</option>
 						</select>
-						<br>
-						 <textarea  rows="5" cols="50" name="orig_text"></textarea>
 					</form>
 				</td>
-
-				<td>
+				<td>Translated Text:
 					<form>
-						Translated Text:
-						<select>
+						<select id="dest_lang">
 							<option value="english">english</option>
 							<option value="german">deutsch</option>
 						</select>
-						 <br>
-						 <textarea  rows="5" cols="50" name="trans_text"></textarea>
 					</form>
 				</td>
+			</tr>
 
+			<tr>
+				<form>
+					<td><textarea id="orig_text" rows="5" cols="50"></textarea></td>
+					<td><textarea id="target_text" rows="5" cols="50" readonly></textarea></td>
+				</form>
 			</tr>
 
 		</table>
 
-		<input type="button" name="translate" value="translate">
+		<button id="translateButton" onclick="httpPost()">translate</button>
 
 	</body>
 
