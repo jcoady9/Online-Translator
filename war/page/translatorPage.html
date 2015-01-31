@@ -9,19 +9,10 @@
 			function httpPost(){
 				//alert(orig_text.value);
 				var xmlHttp = new XMLHttpRequest();
-				xmlHttp.onreadystatechange = function(){
-					if(xmlHttp.readyState == 0){
-						alert("request not initialized.");
-					}else if(xmlHttp.readyState == 1){
-						alert("server connection established.");
-					}else if(xmlHttp.readyState == 2){
-						alert("request recieved.");
-					}else if(xmlHttp.readyState == 3){
-						alert("processing request.");
-					}else{
-						alert("request finished, response is ready");
-						target_text.value = xmlHttp.responseXML;
-					}
+				xmlHttp.readyonstatechange = function(){
+				    if(xmlHttp.readyState == 4){
+				        alert("hi");
+				    }
 				};
 				xmlHttp.open("POST", "http://localhost:8081/translate", false);
 				xmlHttp.send(null);

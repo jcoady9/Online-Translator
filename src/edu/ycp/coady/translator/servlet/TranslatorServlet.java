@@ -13,11 +13,9 @@ public class TranslatorServlet extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String cType = req.getContentType();
-		int length = req.getContentLength();
-		System.out.println(cType);
-		System.out.println(length);
-		System.out.println("hi, how's it going?");
+        resp.setContentType("text/html");
+        resp.setStatus(HttpServletResponse.SC_OK);
+        resp.getWriter().println("<h1>This is your conscious speaking....</h1>");
 	}
 	
 }

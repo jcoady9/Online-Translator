@@ -3,6 +3,7 @@
  */
 package edu.ycp.coady.translator;
 
+import edu.ycp.coady.translator.servlet.TranslatorServlet;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.webapp.WebAppContext;
 
@@ -21,10 +22,10 @@ public class Main {
 		webContext.setContextPath("/");
 		webContext.setWar("./war");
 		webContext.setResourceBase("./war/page/");
-		webContext.setWelcomeFiles(new String[] {"translatorPage.html"});
-		
+		webContext.setWelcomeFiles(new String[]{"translatorPage.html"});
+        webContext.addServlet(TranslatorServlet.class, "/translate");
 		server.setHandler(webContext);
-		
+
 		server.start();
 
         System.out.println("Server starting up, enter 'quit' to shutdown.");
