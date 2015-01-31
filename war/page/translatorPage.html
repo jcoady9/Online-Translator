@@ -23,9 +23,10 @@
 						target_text.value = xmlHttp.responseXML;
 					}
 				};
-				xmlHttp.open("POST", "http://localhost:8081", true);
+				xmlHttp.open("POST", "http://localhost:8081/translate", false);
 				xmlHttp.send(null);
 				//target_text.value = xmlHttp.statusText + xmlHttp.readyState;
+				target_text.value = xmlHttp.responseText;
 			}
 		</script>
 

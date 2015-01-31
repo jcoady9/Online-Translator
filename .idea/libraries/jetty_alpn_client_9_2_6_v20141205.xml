@@ -1,31 +1,31 @@
 <component name="libraryTable">
   <library name="jetty-alpn-client-9.2.6.v20141205">
     <CLASSES>
-      <root url="jar://E:/jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-alpn-client-9.2.6.v20141205.jar!/" />
-      <root url="jar://E:/jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-alpn-server-9.2.6.v20141205.jar!/" />
-      <root url="jar://E:/jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-annotations-9.2.6.v20141205.jar!/" />
-      <root url="jar://E:/jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-cdi-9.2.6.v20141205.jar!/" />
-      <root url="jar://E:/jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-client-9.2.6.v20141205.jar!/" />
-      <root url="jar://E:/jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-continuation-9.2.6.v20141205.jar!/" />
-      <root url="jar://E:/jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-deploy-9.2.6.v20141205.jar!/" />
-      <root url="jar://E:/jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-http-9.2.6.v20141205.jar!/" />
-      <root url="jar://E:/jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-io-9.2.6.v20141205.jar!/" />
-      <root url="jar://E:/jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-jaas-9.2.6.v20141205.jar!/" />
-      <root url="jar://E:/jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-jaspi-9.2.6.v20141205.jar!/" />
-      <root url="jar://E:/jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-jmx-9.2.6.v20141205.jar!/" />
-      <root url="jar://E:/jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-jndi-9.2.6.v20141205.jar!/" />
-      <root url="jar://E:/jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-plus-9.2.6.v20141205.jar!/" />
-      <root url="jar://E:/jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-proxy-9.2.6.v20141205.jar!/" />
-      <root url="jar://E:/jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-quickstart-9.2.6.v20141205.jar!/" />
-      <root url="jar://E:/jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-rewrite-9.2.6.v20141205.jar!/" />
-      <root url="jar://E:/jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-security-9.2.6.v20141205.jar!/" />
-      <root url="jar://E:/jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-server-9.2.6.v20141205.jar!/" />
-      <root url="jar://E:/jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-servlet-9.2.6.v20141205.jar!/" />
-      <root url="jar://E:/jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-servlets-9.2.6.v20141205.jar!/" />
-      <root url="jar://E:/jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-util-9.2.6.v20141205.jar!/" />
-      <root url="jar://E:/jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-webapp-9.2.6.v20141205.jar!/" />
-      <root url="jar://E:/jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-xml-9.2.6.v20141205.jar!/" />
-      <root url="jar://E:/jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/servlet-api-3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-alpn-client-9.2.6.v20141205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-alpn-server-9.2.6.v20141205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-annotations-9.2.6.v20141205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-cdi-9.2.6.v20141205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-client-9.2.6.v20141205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-continuation-9.2.6.v20141205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-deploy-9.2.6.v20141205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-http-9.2.6.v20141205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-io-9.2.6.v20141205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-jaas-9.2.6.v20141205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-jaspi-9.2.6.v20141205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-jmx-9.2.6.v20141205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-jndi-9.2.6.v20141205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-plus-9.2.6.v20141205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-proxy-9.2.6.v20141205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-quickstart-9.2.6.v20141205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-rewrite-9.2.6.v20141205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-security-9.2.6.v20141205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-server-9.2.6.v20141205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-servlet-9.2.6.v20141205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-servlets-9.2.6.v20141205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-util-9.2.6.v20141205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-webapp-9.2.6.v20141205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/jetty-xml-9.2.6.v20141205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jetty-distribution-9.2.6.v20141205/jetty-distribution-9.2.6.v20141205/lib/servlet-api-3.1.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
