@@ -6,6 +6,8 @@ package edu.ycp.coady.translator;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.webapp.WebAppContext;
 
+import java.util.Scanner;
+
 /**
  * @author jcoady9
  *
@@ -24,6 +26,21 @@ public class Main {
 		server.setHandler(webContext);
 		
 		server.start();
-		server.join();
+
+        System.out.println("Server starting up, enter 'quit' to shutdown.");
+        Scanner scanner = new Scanner(System.in);
+        while(scanner.hasNextLine()){
+            String str = scanner.nextLine();
+            if(str.trim().toLowerCase().equals("quit")){
+                break;
+            }
+        }
+
+        System.out.println("shutting down!");
+        server.stop();
+        server.join();
+        System.out.println("Server is shutdown, goodbye!");
+
+        return;
 	}
 }
