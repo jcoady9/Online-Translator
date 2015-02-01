@@ -7,17 +7,12 @@
 
 		<script type="text/javascript">
 			function httpPost(){
-				//alert(orig_text.value);
-				var xmlHttp = new XMLHttpRequest();
-				xmlHttp.readyonstatechange = function(){
-				    if(xmlHttp.readyState == 4){
-				        alert("hi");
-				    }
-				};
-				xmlHttp.open("POST", "http://localhost:8081/translate", false);
-				xmlHttp.send(null);
-				//target_text.value = xmlHttp.statusText + xmlHttp.readyState;
-				target_text.value = xmlHttp.responseText;
+			    if(orig_text.value != ""){
+                    var xmlHttp = new XMLHttpRequest();
+                    xmlHttp.open("POST", "http://localhost:8081/translate", false);
+                    xmlHttp.send(null);
+                    target_text.value = xmlHttp.responseText;
+				}
 			}
 		</script>
 
