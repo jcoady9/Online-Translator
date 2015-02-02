@@ -15,10 +15,12 @@ public class TranslatorServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String text = (String)req.getParameter("text");
-        Translator translator = new Translator("english", "german");
+        String source_lang = (String)req.getParameter("source_lang");
+        String target_lang = (String)req.getParameter("target_lang");
+        Translator translator = new Translator(source_lang, target_lang);
         resp.setContentType("text/html");
         resp.setStatus(HttpServletResponse.SC_OK);
-        resp.getWriter().println(translator.translate(text));
+        resp.getWriter().println(translator.translate(text + " : " + translator.getSourceLanguage() + " : " + translator.getTargetLanguage()));
 	}
 	
 }

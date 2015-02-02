@@ -9,8 +9,9 @@
 			function httpPost(){
 			    if(orig_text.value != ""){
                     var xmlHttp = new XMLHttpRequest();
-                    var parameters = "text=" + orig_text.value;
-                    alert(parameters);
+                    var source_select = source_lang.options[source_lang.selectedIndex].value;
+                    var target_select = target_lang.options[target_lang.selectedIndex].value;
+                    var parameters = "text=" + orig_text.value + "&source_lang=" + source_select + "&target_lang=" + target_select;
                     xmlHttp.open("POST", "http://localhost:8081/translate", false);
                     xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                     xmlHttp.setRequestHeader("Content-length", parameters.length);
@@ -37,7 +38,7 @@
 				</td>
 				<td>Translated Text:
 					<form>
-						<select id="dest_lang">
+						<select id="target_lang">
 							<option value="english">english</option>
 							<option value="german">deutsch</option>
 						</select>

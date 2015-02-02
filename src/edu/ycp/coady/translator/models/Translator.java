@@ -14,22 +14,22 @@ public class Translator {
     }
 
     //setter for source language
-    void setSourceLanguage(String sourceLang){
+    public void setSourceLanguage(String sourceLang){
         sourceLanguage = sourceLang;
     }
 
     //getter for source language
-    String getSourceLanguage(){
+    public String getSourceLanguage(){
         return sourceLanguage;
     }
 
     //setter for target language
-    void setTargetLanguage(String targetLang){
+    public void setTargetLanguage(String targetLang){
         targetLanguage = targetLang;
     }
 
     //getter for target language
-    String getTargetLanguage(){
+    public String getTargetLanguage(){
         return targetLanguage;
     }
 
