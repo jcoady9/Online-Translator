@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa7af85f-babc-4c6a-976f-a97f60a9c78c" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\user\computerScience\eclipseWorkspace\Online-Translator\.classpath" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\user\computerScience\eclipseWorkspace\Online-Translator\.project" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\user\computerScience\eclipseWorkspace\Online-Translator\.settings\org.eclipse.jdt.core.prefs" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\user\computerScience\eclipseWorkspace\Online-Translator\bin\.gitignore" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Online-Translator.iml" afterPath="$PROJECT_DIR$/Online-Translator.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/edu/ycp/coady/translator/models/TranslatorTest.java" afterPath="$PROJECT_DIR$/tests/edu/ycp/coady/translator/models/TranslatorTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/ycp/coady/translator/models/Translator.java" afterPath="$PROJECT_DIR$/src/edu/ycp/coady/translator/models/Translator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/ycp/coady/translator/servlet/TranslatorServlet.java" afterPath="$PROJECT_DIR$/src/edu/ycp/coady/translator/servlet/TranslatorServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/page/translatorPage.html" afterPath="$PROJECT_DIR$/war/page/translatorPage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="translator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,8 +44,8 @@
       <file leaf-file-name="TranslatorServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/ycp/coady/translator/servlet/TranslatorServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-              <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="510">
+              <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -58,11 +53,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Translator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/ycp/coady/translator/models/Translator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="612">
+              <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="translatorPage.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/war/page/translatorPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41018766" vertical-offset="0" max-vertical-offset="1054">
-              <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.45576409" vertical-offset="0" max-vertical-offset="1122">
+              <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -87,8 +92,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/war/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/edu/ycp/coady/translator/servlet/TranslatorServlet.java" />
-        <option value="$PROJECT_DIR$/src/edu/ycp/coady/translator/models/Translator.java" />
         <option value="$PROJECT_DIR$/src/edu/ycp/coady/translator/models/Database.java" />
         <option value="$PROJECT_DIR$/src/edu/ycp/coady/translator/tests/TranslatorTests.java" />
         <option value="$PROJECT_DIR$/src/tests/TranslatorTests.java" />
@@ -96,6 +99,8 @@
         <option value="$PROJECT_DIR$/src/edu/ycp/coady/translator/Main.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/tests/edu/ycp/coady/translator/models/TranslatorTest.java" />
+        <option value="$PROJECT_DIR$/src/edu/ycp/coady/translator/models/Translator.java" />
+        <option value="$PROJECT_DIR$/src/edu/ycp/coady/translator/servlet/TranslatorServlet.java" />
         <option value="$PROJECT_DIR$/war/page/translatorPage.html" />
       </list>
     </option>
@@ -915,10 +920,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/ycp/coady/translator/models/Translator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="612">
+          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/ycp/coady/translator/servlet/TranslatorServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="510">
+          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -927,8 +940,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/war/page/translatorPage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41018766" vertical-offset="0" max-vertical-offset="1054">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.45576409" vertical-offset="0" max-vertical-offset="1122">
+          <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
           <folding />
         </state>
       </provider>

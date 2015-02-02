@@ -34,7 +34,7 @@ public class Translator {
     }
 
     //translates text from the source language to the target language
-    String translate(String text){
+   public String translate(String text){
         return text;
     }
 }

@@ -9,8 +9,12 @@
 			function httpPost(){
 			    if(orig_text.value != ""){
                     var xmlHttp = new XMLHttpRequest();
+                    var parameters = "text=" + orig_text.value;
+                    alert(parameters);
                     xmlHttp.open("POST", "http://localhost:8081/translate", false);
-                    xmlHttp.send(null);
+                    xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                    xmlHttp.setRequestHeader("Content-length", parameters.length);
+                    xmlHttp.send(parameters);
                     target_text.value = xmlHttp.responseText;
 				}
 			}
