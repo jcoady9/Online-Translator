@@ -4,7 +4,6 @@
 
 	<head>
 		<h1>Online Translator</h1>
-
 		<script type="text/javascript">
 			function httpPost(){
 			    if(orig_text.value != ""){
@@ -16,47 +15,39 @@
                     xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                     xmlHttp.setRequestHeader("Content-length", parameters.length);
                     xmlHttp.send(parameters);
-                    target_text.value = xmlHttp.responseText;
+                    if(xmlHttp.status == 200){
+                        target_text.value = xmlHttp.responseText;
+                    }else{
+                        alert(xmlHttp.responseText);
+                    }
+
 				}
 			}
 		</script>
-
 	</head>
 	
 	<body>
-
 		<table>
-
 			<tr>
-				<td>Original Text: 
-					<form>
-						<select id="source_lang">
-							<option value="english">english</option>
-							<option valud="german">deutsch</option>
-						</select>
-					</form>
+				<td>Original Text:
+                    <select id="source_lang">
+                        <option value="english">english</option>
+                        <option valud="german">deutsch</option>
+                    </select>
 				</td>
 				<td>Translated Text:
-					<form>
-						<select id="target_lang">
-							<option value="english">english</option>
-							<option value="german">deutsch</option>
-						</select>
-					</form>
+                    <select id="target_lang">
+                        <option value="english">english</option>
+                        <option value="german">deutsch</option>
+                    </select>
 				</td>
 			</tr>
-
 			<tr>
-				<form>
-					<td><textarea id="orig_text" rows="5" cols="50"></textarea></td>
-					<td><textarea id="target_text" rows="5" cols="50" readonly></textarea></td>
-				</form>
+                <td><textarea id="orig_text" rows="5" cols="50"></textarea></td>
+                <td><textarea id="target_text" rows="5" cols="50" readonly></textarea></td>
 			</tr>
-
 		</table>
-
 		<button id="translateButton" onclick="httpPost()">translate</button>
-
 	</body>
 
 </html>
