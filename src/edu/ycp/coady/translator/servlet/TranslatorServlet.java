@@ -17,7 +17,6 @@ public class TranslatorServlet extends HttpServlet {
         String text = (String)req.getParameter("text");
         String source_lang = (String)req.getParameter("source_lang");
         String target_lang = (String)req.getParameter("target_lang");
-
         //send a bad request response if the text or language codes are not sent in the request
         if(text.equals("") || source_lang.equals("") || target_lang.equals("")){
             resp.setContentType("text/html");
