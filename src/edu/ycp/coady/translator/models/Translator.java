@@ -4,8 +4,8 @@ package edu.ycp.coady.translator.models;
  * Translates a string of text from its source language to the targeted language it is desired in
  */
 public class Translator {
-    
-    private TranslationComponents components;
+
+    private TranslationComponents components;       //stores the source language, source text & target language
 
     //constructor
     public Translator(String sourceLang, String targetLang){
