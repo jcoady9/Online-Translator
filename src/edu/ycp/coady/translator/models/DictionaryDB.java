@@ -8,6 +8,7 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.protocol.HttpClientContext;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
 import java.net.InetAddress;
@@ -22,7 +23,7 @@ public class DictionaryDB implements Database {
 
     public String getData(String query){
 
-        String params = "/?db=" + query.substring(0, query.indexOf(' ') - 1) + "&word=" + query.substring(query.indexOf('/') + 1);
+        String params = "/?db=" + query.substring(0, query.indexOf(' ')) + "&word=" + query.substring(query.indexOf(' ') + 1);
 
         CloseableHttpClient client = HttpClients.custom().build();
         HttpGet httpGet = new HttpGet(url + params);
@@ -33,7 +34,7 @@ public class DictionaryDB implements Database {
             resp = client.execute(httpGet, context);
             if(resp.getStatusLine().getStatusCode() == HttpStatus.SC_OK){
                 HttpEntity entity = resp.getEntity();
-                return entity.getContent().toString();
+                return EntityUtils.toString(entity);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -58,7 +59,7 @@ public class DictionaryDB implements Database {
 
     public boolean isActive(){
         try {
-            if(InetAddress.getByName(url).isReachable(5000)){
+            if(InetAddress.getByName("localhost:2626").isReachable(5000)){
                 return true;
             }
         } catch (IOException e) {

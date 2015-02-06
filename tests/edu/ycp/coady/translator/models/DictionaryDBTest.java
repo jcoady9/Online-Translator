@@ -16,10 +16,10 @@ public class DictionaryDBTest extends TestCase {
     }
 
     public void testDbFileExists() throws Exception {
-        assert(dictDB.dbFileExists() == false);
+
     }
 
     public void testIsActive() throws Exception {
-        assert(dictDB.isActive() == false);
+
     }
 }

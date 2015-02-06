@@ -3,6 +3,7 @@
  */
 package edu.ycp.coady.translator;
 
+import edu.ycp.coady.translator.models.DictionaryDB;
 import edu.ycp.coady.translator.servlet.TranslatorServlet;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.webapp.WebAppContext;
@@ -32,7 +33,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         while(scanner.hasNextLine()){
             String str = scanner.nextLine();
-            if(str.trim().toLowerCase().equals("quit")){
+            str = str.trim().toLowerCase();
+            if(str.equals("quit") || str.equals("exit")){
                 break;
             }
         }
