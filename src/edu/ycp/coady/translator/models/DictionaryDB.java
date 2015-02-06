@@ -10,6 +10,7 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 
 import java.io.IOException;
+import java.net.InetAddress;
 
 
 /**
@@ -17,11 +18,11 @@ import java.io.IOException;
  */
 public class DictionaryDB implements Database {
 
-    private final String url = "http://localhost:2628";  //url of the dictionary server;
+    private final String url = "http://localhost:2626";  //url of the dictionary server;
 
     public String getData(String query){
 
-        String params = "";
+        String params = "/?db=" + query.substring(0, query.indexOf(' ') - 1) + "&word=" + query.substring(query.indexOf('/') + 1);
 
         CloseableHttpClient client = HttpClients.custom().build();
         HttpGet httpGet = new HttpGet(url + params);
@@ -38,7 +39,9 @@ public class DictionaryDB implements Database {
             e.printStackTrace();
         }finally{
             try {
-                resp.close();
+                if (resp != null) {
+                    resp.close();
+                }
                 client.close();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -54,6 +57,13 @@ public class DictionaryDB implements Database {
     }
 
     public boolean isActive(){
+        try {
+            if(InetAddress.getByName(url).isReachable(5000)){
+                return true;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return false;
     }
 
