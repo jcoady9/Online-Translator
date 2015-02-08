@@ -1,5 +1,7 @@
 package edu.ycp.coady.translator.models;
 
+import edu.ycp.coady.translator.controllers.AccessDictionary;
+
 /**
  * Translates a string of text from its source language to the targeted language it is desired in
  */
@@ -34,6 +36,8 @@ public class Translator {
 
     //translates text from the source language to the target language
     public String translate(String text){
-        return text;
+        components.setSourceText(text);
+        AccessDictionary accessDict = new AccessDictionary();
+        return accessDict.getTranslation(components);
     }
 }
