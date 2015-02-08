@@ -12,7 +12,6 @@ import java.util.ArrayList;
 public class AccessDictionary {
 
     public String determineDict(String sourceLang, String targetLang){
-
         if(sourceLang.equals("en") && targetLang.equals("de")){
             return "dc";
         }else{
@@ -24,8 +23,8 @@ public class AccessDictionary {
         ArrayList<String> words = new ArrayList<String>();
 
         int pos = 0;
-        while(text.indexOf(' ') > 0){
-            int nextPos = text.indexOf(' ');
+        while(text.indexOf(' ', pos) > 0){
+            int nextPos = text.indexOf(' ', pos);
             String word = text.substring(pos, nextPos);
             pos = nextPos + 1;
             words.add(word);
