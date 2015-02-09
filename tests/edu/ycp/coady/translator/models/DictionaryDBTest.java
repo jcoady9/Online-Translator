@@ -16,7 +16,7 @@ public class DictionaryDBTest extends TestCase {
     }
 
     public void testDbFileExists() throws Exception {
-
+        //not implemented
     }
 
     public void testIsActive() throws Exception {

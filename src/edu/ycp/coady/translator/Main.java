@@ -3,6 +3,8 @@
  */
 package edu.ycp.coady.translator;
 
+import edu.ycp.coady.translator.models.Database;
+import edu.ycp.coady.translator.models.DictionaryDB;
 import edu.ycp.coady.translator.servlet.TranslatorServlet;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.webapp.WebAppContext;
@@ -26,7 +28,12 @@ public class Main {
         webContext.addServlet(TranslatorServlet.class, "/translate");
 		server.setHandler(webContext);
 
-		server.start();
+		Database dictionaryServer = new DictionaryDB();
+        if(!dictionaryServer.isActive()){
+            throw new Exception("JDict dictionary server is not active, please run JDict before running main server.");
+        }
+
+        server.start();
 
         System.out.println("Server starting up, enter 'quit' to shutdown.");
         Scanner scanner = new Scanner(System.in);
