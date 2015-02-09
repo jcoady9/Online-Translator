@@ -13,7 +13,8 @@ public class AccessDictionaryTest extends TestCase {
     }
 
     public void testDetermineDict() throws Exception {
-        assertEquals(accessDB.determineDict("en", "de"), "dc");
+        assertEquals(accessDB.determineDict("en", "de"), "eng-deu");
+        assertEquals(accessDB.determineDict("de", "en"), "deu-eng");
         try{
             accessDB.determineDict("fr", "ru").equals("jp");
             fail("failed DetermineDict throwing UnsupportedOperationException");
@@ -24,12 +25,12 @@ public class AccessDictionaryTest extends TestCase {
     }
 
     public void testSplitText() throws Exception {
-        String str = "This is a test";
-        ArrayList<String> arrList = accessDB.splitText(str);
+        String str1 = "This is a test";
+        ArrayList<String> arrList = accessDB.splitText(str1);
         assert(arrList.size() == 4);
         int[] indices = new int[arrList.size()];
         for(int i = 0; i < arrList.size(); i++){
-            indices[i] = str.indexOf(arrList.get(i));
+            indices[i] = str1.indexOf(arrList.get(i));
         }
         for(int i = 1; i < arrList.size() - 1; i++){
            assert(indices[i] > indices[i - 1] && indices[i] < indices[i + 1]);
@@ -38,7 +39,7 @@ public class AccessDictionaryTest extends TestCase {
     }
 
     public void testLookUpWord() throws Exception {
-        assert(accessDB.lookUpWord("dc", "printer").equals("Drucker"));
+        assert(accessDB.lookUpWord("eng-deu", "printer").equals("Drucker"));
     }
 
     public void testGetTranslation() throws Exception {

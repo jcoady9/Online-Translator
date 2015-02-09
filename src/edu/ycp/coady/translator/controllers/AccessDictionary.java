@@ -11,9 +11,11 @@ import java.util.ArrayList;
  */
 public class AccessDictionary {
 
-    public String determineDict(String sourceLang, String targetLang){
-        if(sourceLang.equals("en") && targetLang.equals("de")){
-            return "dc";
+    public String determineDict(String sourceLang, String targetLang) {
+        if (sourceLang.equals("en") && targetLang.equals("de")) {
+            return "eng-deu";
+        }else if(sourceLang.equals("de") && targetLang.equals("en")){
+            return "deu-eng";
         }else{
             throw new UnsupportedOperationException("Dictionary is not supported.");
         }
@@ -29,7 +31,6 @@ public class AccessDictionary {
             pos = nextPos + 1;
             words.add(word);
         }
-        
         return words;
     }
 
