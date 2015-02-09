@@ -36,6 +36,16 @@ public class AccessDictionaryTest extends TestCase {
            assert(indices[i] > indices[i - 1] && indices[i] < indices[i + 1]);
         }
 
+        String str2 = "This is another test string maybe this will break the system";
+        ArrayList<String> wordList = accessDB.splitText(str2);
+        assert(wordList.size() == 11);
+        int[] pos = new int[wordList.size()];
+        for(int i = 0; i < wordList.size(); i++){
+            pos[i] = str1.indexOf(wordList.get(i));
+        }
+        for(int i = 1; i < wordList.size() - 1; i++){
+            assert(pos[i] > pos[i - 1] && pos[i] < pos[i + 1]);
+        }
     }
 
     public void testLookUpWord() throws Exception {

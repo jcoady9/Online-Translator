@@ -3,7 +3,6 @@
  */
 package edu.ycp.coady.translator;
 
-import edu.ycp.coady.translator.models.DictionaryDB;
 import edu.ycp.coady.translator.servlet.TranslatorServlet;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.webapp.WebAppContext;

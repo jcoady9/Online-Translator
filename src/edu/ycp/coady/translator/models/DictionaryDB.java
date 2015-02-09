@@ -34,7 +34,11 @@ public class DictionaryDB implements Database {
             resp = client.execute(httpGet, context);
             if(resp.getStatusLine().getStatusCode() == HttpStatus.SC_OK){
                 HttpEntity entity = resp.getEntity();
-                return parseForResult(EntityUtils.toString(entity));
+                String result = parseForResult(EntityUtils.toString(entity));
+                if(result == null){
+                    return query.substring(query.indexOf(' ') + 1);
+                }
+                return result;
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -69,6 +73,9 @@ public class DictionaryDB implements Database {
     }
 
     private String parseForResult(String response){
+        if(!response.contains("<pre>")){
+            return null;
+        }
         String result = response.substring(response.indexOf("<pre>"), response.indexOf("</pre>"));
         result = result.substring(result.lastIndexOf('/') + 1, result.length());
         result = result.trim();
