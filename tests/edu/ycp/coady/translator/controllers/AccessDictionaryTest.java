@@ -26,6 +26,7 @@ public class AccessDictionaryTest extends TestCase {
     public void testSplitText() throws Exception {
         String str = "This is a test";
         ArrayList<String> arrList = accessDB.splitText(str);
+        assert(arrList.size() == 4);
         int[] indices = new int[arrList.size()];
         for(int i = 0; i < arrList.size(); i++){
             indices[i] = str.indexOf(arrList.get(i));

@@ -29,7 +29,7 @@ public class AccessDictionary {
             pos = nextPos + 1;
             words.add(word);
         }
-
+        
         return words;
     }
 
@@ -44,6 +44,7 @@ public class AccessDictionary {
         ArrayList<String> words = splitText(components.getSourceText());
 
         for(String word : words){
+            System.out.println(word);
             translation.concat(lookUpWord(dict, word) + " ");
         }
 
