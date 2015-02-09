@@ -11,7 +11,7 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
-import java.net.InetAddress;
+import java.net.Socket;
 
 
 /**
@@ -62,14 +62,22 @@ public class DictionaryDB implements Database {
     }
 
     public boolean isActive(){
+        Socket socket = null;
         try {
-            if(InetAddress.getByName("localhost:2626").isReachable(5000)){
-                return true;
-            }
+            socket = new Socket("localhost",2626);
         } catch (IOException e) {
-            e.printStackTrace();
+            return false;
+        }finally{
+            if(socket != null){
+                try {
+                    socket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
-        return false;
+
+        return true;
     }
 
     private String parseForResult(String response){

@@ -20,6 +20,6 @@ public class DictionaryDBTest extends TestCase {
     }
 
     public void testIsActive() throws Exception {
-
+        assert(dictDB.isActive());
     }
 }
