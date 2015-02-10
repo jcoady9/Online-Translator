@@ -1,6 +1,7 @@
 package edu.ycp.coady.translator.controllers;
 
 import edu.ycp.coady.translator.models.Database;
+import edu.ycp.coady.translator.models.DictQueryComponents;
 import edu.ycp.coady.translator.models.DictionaryDB;
 import edu.ycp.coady.translator.models.TranslationComponents;
 
@@ -38,7 +39,8 @@ public class AccessDictionary {
 
     public String lookUpWord(String dict, String word){
         Database dictDB = new DictionaryDB();
-        return dictDB.getData(dict + " " + word);
+        DictQueryComponents query = new DictQueryComponents(dict, word);
+        return dictDB.getData(query);
     }
 
     public String getTranslation(TranslationComponents components){
