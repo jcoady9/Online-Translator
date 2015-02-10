@@ -21,9 +21,10 @@ public class DictionaryDB implements Database {
 
     private final String url = "http://localhost:2626";  //url of the dictionary server;
 
-    public String getData(String query){
+    public String getData(DBQueryComponents queryComponents){
 
-        String params = "/?db=" + query.substring(0, query.indexOf(' ')) + "&word=" + query.substring(query.indexOf(' ') + 1);
+        DictQueryComponents query = (DictQueryComponents)queryComponents;
+        String params = "/?db=" + query.getDatabaseName() + "&word=" + query.getWord();
 
         CloseableHttpClient client = HttpClients.custom().build();
         HttpGet httpGet = new HttpGet(url + params);
@@ -36,7 +37,7 @@ public class DictionaryDB implements Database {
                 HttpEntity entity = resp.getEntity();
                 String result = parseForResult(EntityUtils.toString(entity));
                 if(result == null){
-                    return query.substring(query.indexOf(' ') + 1);
+                    return query.getWord();
                 }
                 return result;
             }
