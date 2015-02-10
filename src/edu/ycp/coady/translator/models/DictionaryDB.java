@@ -35,7 +35,12 @@ public class DictionaryDB implements Database {
             resp = client.execute(httpGet, context);
             if(resp.getStatusLine().getStatusCode() == HttpStatus.SC_OK){
                 HttpEntity entity = resp.getEntity();
-                String result = parseForResult(EntityUtils.toString(entity));
+                String result = "";
+                if(query.getDatabaseName().equals("eng-deu")){
+                    result = parseForGermanResult(EntityUtils.toString(entity));
+                }else if(query.getDatabaseName().equals("deu-eng")){
+                    result = parseForEnglishResult(EntityUtils.toString(entity));
+                }
                 if(result == null){
                     return query.getWord();
                 }
@@ -81,7 +86,7 @@ public class DictionaryDB implements Database {
         return true;
     }
 
-    private String parseForResult(String response){
+    private String parseForGermanResult(String response){
         if(!response.contains("<pre>")){
             return null;
         }
@@ -93,6 +98,25 @@ public class DictionaryDB implements Database {
         }
         result = result.trim();
         return result.replace("<f>", "").trim();
+    }
+
+    private String parseForEnglishResult(String response){
+        if(!response.contains("<pre>")){
+            return null;
+        }
+        response = response.substring(response.indexOf("<pre>"), response.indexOf("</pre>"));
+        int index = response.indexOf(']');
+        int commaIndex = response.indexOf(',');
+        if(commaIndex < 0){
+            commaIndex = response.length() - 1;
+        }
+        String result;
+        if(response.charAt(index + 1) == '\n'){
+            result = response.substring(index + 1, commaIndex);
+        }else{
+            result = response.substring(index + 4, commaIndex);
+        }
+        return result.trim();
     }
 
 }
